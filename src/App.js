@@ -15,7 +15,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk))
 function App() {
 
   return (
-    <React.Fragment>
+    <div id="overlay">
       <Provider store={store}>
         <Router>
           <Header />
@@ -28,7 +28,7 @@ function App() {
         </Router>
         <Footer />
       </Provider>
-    </React.Fragment>
+    </div>
   );
 }
 

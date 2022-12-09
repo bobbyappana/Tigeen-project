@@ -9,11 +9,10 @@ import { useSelector, useDispatch } from 'react-redux';
 const TabOne = () => {
 
     const logoState = useSelector(x => x.logoReducer)
-    const presetState = useSelector(x => x.presetReducer)
-    const continueState = useSelector(x => x.continueReducer)
 
     const [backgroundColor, setBackgroundColor] = useState('blue')
     const [isChecked, setIsChecked] = useState(false)
+    const [isRadiochecked, setIsRadoChecked] = useState(true)
     const [showHeader, setShowHeader] = useState(true)
     const [showFooter, setShowFooter] = useState(true)
     const [showLeftDrawer, setshowLeftDrawer] = useState(true)
@@ -194,13 +193,21 @@ const TabOne = () => {
                                             <h4>Preset color</h4>
                                             <div className='d-flex'>
                                                 <div class="col-md-6 form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" onChange={() => { setBackgroundColor("Blue") }} />
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" onChange={(e) => {
+                                                        setBackgroundColor("Blue");
+                                                        if (isRadiochecked) setIsRadoChecked(false)
+                                                        if (!isRadiochecked) setIsRadoChecked(true)
+                                                    }} checked={isRadiochecked} />
                                                     <label class="form-check-label" for="exampleRadios1">
                                                         Blue (#1976d2)
                                                     </label>
                                                 </div>
                                                 <div class="red col-md-6 form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" onChange={() => { setBackgroundColor("red") }} />
+                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" onChange={(e) => {
+                                                        setBackgroundColor("red");
+                                                        if (isRadiochecked) setIsRadoChecked(false)
+                                                        if (!isRadiochecked) setIsRadoChecked(true)
+                                                    }} />
                                                     <label class="form-check-label" for="exampleRadios2">
                                                         Red (#ff0000)
                                                     </label>

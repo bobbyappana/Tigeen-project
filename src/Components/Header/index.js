@@ -45,7 +45,7 @@ const Header = () => {
         setIsShowTab(showtab.showTab)
     }, [isShowTab, showtab])
 
-    
+
 
     const openNavLeft = () => {
         document.getElementById("mySidenav-left").style.width = "250px";
@@ -80,7 +80,7 @@ const Header = () => {
                                 <a href="#" className="navbar-brand">
                                     <div id="mySidenav-left" className="sidenav-left">
                                         <a href="javascript:void(0)" className="closebtn" onClick={closeNavLeft}>
-                                            <svg xmlns="http://www.w3.org/2000/svg" onClick={closeNav} width="30" height="30" fill="white" className="bi bi-x bg-dark rounded" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" className="bi bi-x bg-dark rounded" viewBox="0 0 16 16">
                                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                             </svg>
                                         </a>
@@ -110,7 +110,7 @@ const Header = () => {
                                 <a href="#" className="navbar-brand">
                                     <div id="mySidenav-right" className="sidenav">
                                         <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>
-                                            <svg xmlns="http://www.w3.org/2000/svg" onClick={closeNav} width="30" height="30" fill="white" className="bi bi-x bg-dark rounded" viewBox="0 0 16 16">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" className="bi bi-x bg-dark rounded" viewBox="0 0 16 16">
                                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                                             </svg>
                                         </a>
@@ -130,12 +130,12 @@ const Header = () => {
                         </button>
                         {isShowTab && <div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div className="navbar-nav">
-                                <a href="#" className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab One" ? "tab-active" : ''}`} onClick={() => {
+                                <a className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab One" ? "tab-active" : ''}`} onClick={() => {
                                     setactiveTab("Tab One");
                                     navigate('/tab-one')
                                 }}>Tab One</a>
-                                <a href="#" className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab Two" ? "tab-active" : ''}`} onClick={() => { setactiveTab("Tab Two"); navigate('/tab-two') }}>Tab Two</a>
-                                <a href="#" className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab Three" ? "tab-active" : ''}`} onClick={() => { setactiveTab("Tab Three"); navigate('/tab-three') }}>Tab Three</a>
+                                <a className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab Two" ? "tab-active" : ''}`} onClick={() => { setactiveTab("Tab Two"); navigate('/tab-two') }}>Tab Two</a>
+                                <a className={`nav-item nav-link text-uppercase tab ${activeTab == "Tab Three" ? "tab-active" : ''}`} onClick={() => { setactiveTab("Tab Three"); navigate('/tab-three') }}>Tab Three</a>
                             </div>
                             {/* <div className="navbar-nav">
                         <label class="switch">
